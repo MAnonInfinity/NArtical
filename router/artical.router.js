@@ -8,8 +8,10 @@ const router = express.Router();
 // });
 
 
-router.get('/artical', midd);
+// router.get('/artical', midd);
 
+router.get('/user/:id', (req, res) => {
 
+});
 
 module.exports = router;

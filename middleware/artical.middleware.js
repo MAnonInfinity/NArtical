@@ -20,18 +20,28 @@ const User = db.artical;
     //           res.send(user);
     // }
     
-    const conmid  = (req, res, next) => {
+    // const conmid  = (req, res, next) => {
 
-        const status = req.body.status
+    //     const status = req.body.status
 
-        if ( status == 1) {
-            res.send('artical table')
-        } else if ( status == 0 ) {
-            res.send('you are not eligible')
-        }
-        else{    
-            next()
-        }
+    //     if ( status == 1) {
+    //         res.send('artical table')
+    //     } else if ( status == 0 ) {
+    //         res.send('you are not eligible')
+    //     }
+    //     else{    
+    //         next()
+    //     }
+    // }
+
+    const getStatus = (req, res, next) => {
+        const id = req.body.params
+
+        const userData = await usermodel.findOne({
+            where: {
+                id: id
+            }
+        })
     }
     
 
